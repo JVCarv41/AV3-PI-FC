@@ -1,0 +1,108 @@
+.error-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #004526 0%, #0a2e36 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.error-content {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error-title {
+  font-size: 5rem;
+  color: #0a2e36;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.error-subtitle {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.error-content .error-message {
+  color: #222;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.error-link {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #004526;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.5s;
+}
+
+/* Hover effect */
+.error-link:hover {
+  background: #0a2e36;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+  .error-content {
+    padding: 2rem;
+  }
+
+  .error-title {
+    font-size: 4rem;
+  }
+
+  .error-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .error-content .error-message {
+    font-size: 1rem;
+  }
+
+  .error-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Phones and smaller */
+@media (max-width: 480px) {
+  .error-content {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .error-title {
+    font-size: 3rem;
+  }
+
+  .error-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .error-content .error-message {
+    font-size: 0.95rem;
+  }
+
+  .error-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}

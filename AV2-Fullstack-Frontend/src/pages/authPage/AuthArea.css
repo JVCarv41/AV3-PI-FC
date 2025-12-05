@@ -1,0 +1,182 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  /* background-image: url("../../../public/leaves-background.jpg"); */
+  background-image: url("/food-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  color: #f4f4f4;
+}
+
+.auth-page h1 {
+  font-size: 500%;
+  margin-bottom: 0px;
+}
+
+.auth-page-title{
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black, -2px 0px 0 black, 2px 0px 0 black, 0px -2px 0 black,
+    0px 2px 0 black;
+}
+
+.auth-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: fit-content;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.auth-box {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  min-height: 420px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f4f4f4;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.auth-box form > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box form p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+}
+
+.auth-box .submit-button {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  background-color: #f4f4f4;
+  color: #000;
+  font-weight: bold;
+  border: 3px solid #f4f4f4;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-box .submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #f4f4f4;
+  border: 3px solid #f4f4f4;
+  border-radius: 4px;
+}
+
+/* ===== Responsive Styles ===== */
+
+@media (max-width: 768px) {
+  body,
+  html {
+    background-image: url("../../../public/food-background-vert.jpg");
+  }
+
+  .auth-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .auth-box {
+    width: 90%;
+    min-width: 260px;
+    padding: 1.5rem;
+    min-height: unset;
+  }
+
+  .auth-page h1 {
+    font-size: 400%;
+  }
+
+  .auth-page h2 {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .auth-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-box .submit-button {
+    font-size: 1rem;
+  }
+}

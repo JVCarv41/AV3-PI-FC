@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./AV2-backend-Fullstack
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGO_URL=mongodb://db:27017/shopping
+      - JWT_SECRET=chave_secreta_super_segura
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./AV2-Fullstack-Frontend
+      args:
+        VITE_BACKEND_URL: http://localhost:4000
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  db:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

@@ -1,0 +1,91 @@
+/* Shopping Lists */
+.shopping-list-area {
+  box-sizing: border-box;
+  width: 72%;
+  align-self: stretch;
+  padding: 1rem;
+}
+.shopping-list-area h2 {
+  margin-top: 0px;
+}
+/* Individual Shopping List */
+.shopping-list {
+  box-sizing: border-box;
+  border: 10px solid #00331a;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+/* Header */
+.shopping-list-header {
+  box-sizing: border-box;
+  border-bottom: 5px solid #00331a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+.shopping-list-header h2 {
+  margin-top: 1rem;
+}
+/* Header Buttons */
+.shopping-list-header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shopping-list-header-buttons button {
+  height: 50%;
+  cursor: pointer;
+  border: 0;
+  transition: background 0.3s ease;
+  background-color: inherit;
+  font-weight: inherit;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  color: #00331a;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.shopping-list-header-buttons button:hover {
+  background-color: #00331a;
+  color: #fafafa;
+}
+/* Text inside .shhopping-list-area */
+.shopping-list-area li{
+  font-size: 103%;
+}
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .shopping-list-area {
+    width: 100%;
+    margin: 2% 0;
+  }
+}
+@media (max-width: 700px) {
+  .shopping-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shopping-list-header-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .shopping-list-header-buttons button {
+    width: auto;
+    padding: 0.6rem 1rem;
+    height: auto;
+  }
+}
