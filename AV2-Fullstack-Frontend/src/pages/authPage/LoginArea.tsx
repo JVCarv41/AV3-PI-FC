@@ -11,7 +11,7 @@ function LoginArea({ backendUrl }) {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
+    
     if (!email || !password) {
       toast.error("Email and password are required.");
       return;
