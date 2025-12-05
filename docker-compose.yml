@@ -6,10 +6,11 @@ services:
     ports:
       - "4000:4000"
     environment:
-      - MONGO_URL=mongodb://db:27017/shopping
-      - JWT_SECRET=chave_secreta_super_segura
-    depends_on:
-      - db
+      # - MONGO_URL=mongodb://db:27017/shopping
+      - MONGO_URL=mongodb+srv://JoaoMongo:JoaoMongo@cluster0.b8fwctf.mongodb.net/shopping?retryWrites=true&w=majority
+      - JWT_SECRET= 
+    # depends_on:
+    #   - db
 
   frontend:
     build:
@@ -21,12 +22,12 @@ services:
     depends_on:
       - backend
 
-  db:
-    image: mongo:6
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
+  # db:
+  #   image: mongo:6
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo_data:/data/db
 
-volumes:
-  mongo_data:
+# volumes:
+#   mongo_data:
