@@ -9,6 +9,8 @@ import AuthPage from "./pages/authPage/AuthPage";
 import ProtectedRoute from "./pages/authPage/ProtectedRoute";
 import UserPage from "./pages/userArea/UserPage";
 
+console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
+
 const ProtectedLayout = () => (
   <ProtectedRoute>
     <Outlet />

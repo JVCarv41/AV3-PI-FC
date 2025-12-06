@@ -15,6 +15,8 @@ function SignUpArea({ backendUrl }) {
     setError("");
     setSuccessMessage("");
 
+    console.log("URL do backend:",backendUrl);
+
     if (!name || !email || !password) {
       setError("All fields are required.");
       return;
